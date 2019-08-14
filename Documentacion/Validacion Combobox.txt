@@ -1,0 +1,10 @@
+        private void cmbCuenta_Validating(object sender, CancelEventArgs e)
+        {
+            var combo = (ComboBox) sender;
+            if (combo.SelectedValue == null && combo.Text != string.Empty)
+                e.Cancel = true;
+        }
+
+
+        var d = (T0085_PERSONAL) cmbVendedor.SelectedItem;
+                txtVendedorName.Text = d.NOMBRE + " " + d.APELLIDO;

@@ -1,0 +1,24 @@
+        private void dgvItemsRemito_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = (DataGridView) sender;
+            string nombreColumna=null;
+
+            if (e.RowIndex < 0)
+            {
+
+                return;
+            }
+            nombreColumna = "iDDataGridViewTextBoxColumn";
+            var x = Convert.ToInt32(dgv[dgv.Columns[nombreColumna].Index, e.RowIndex].Value);
+
+            textBox1.Text = x.ToString();
+        }
+
+
+
+		  if (e.RowIndex >= 0)
+            {
+                string nameX = "iDFacturaDataGridViewTextBoxColumn";
+                txtIdFactura.Text = dgvSeleccionItem[dgvSeleccionItem.Columns[nameX].Index, e.RowIndex].Value.ToString();
+                IdFactura = Convert.ToInt32(dgvSeleccionItem[dgvSeleccionItem.Columns[nameX].Index, e.RowIndex].Value);
+            }
